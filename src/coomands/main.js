@@ -1,6 +1,7 @@
 const os = require('os')
 const {runtime} = require("../untils/functions");
 const { uptime } = require('process');
+const { text } = require('stream/consumers');
 module.export =[
 {
     name:"alive",
@@ -34,7 +35,7 @@ await conn.sendmessage(FormDataEvent,
 },
 {
     name:"ping ",
-    description:"alive command",
+    description:"ping command",
     react:"🤖",
     owneronly:false,
     grouponly:false,
@@ -43,7 +44,11 @@ await conn.sendmessage(FormDataEvent,
     async execute(conn,mek,args,contex){
         const{from,pushname,reply,quoted} = context;
         try{
-           
+        let start = date.now();
+        await conn.sendMessage(from,{text:"pinging...."})
+        let end = date.now();
+        let pingtime = end-start;
+        reply(`pong✈\n${pingtime}ms...`)   
 
         }catch(e){
             console.log(e)
