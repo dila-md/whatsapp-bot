@@ -2,9 +2,9 @@
   "name": "DILA-MD",
   "version": "1",
   "description": "A Simple WhatsApp bot created By dilaksha",
-  "main": "dila.js",
+  "main": "queen.js",
   "scripts": {
-    "start": "pm2 start dila.js --deep-monitoring --attach --name DILA-MD",
+    "start": "pm2 start queen.js --deep-monitoring --attach --name DILA-MD",
     "stop": "pm2 stop DILA-MD",
     "restart": "pm2 restart DILA-MD"
   },
